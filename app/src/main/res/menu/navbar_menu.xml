@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_comparison"
+        android:icon="@drawable/icon_comparison"
+        android:title="@string/comparison" />
+    <item
+        android:id="@+id/navigation_game"
+        android:icon="@drawable/icon_game"
+        android:title="@string/game" />
+    <item
+        android:id="@+id/navigation_guide"
+        android:icon="@drawable/icon_guide"
+        android:title="@string/guide" />
+    <item
+        android:id="@+id/navigation_match"
+        android:icon="@drawable/icon_match"
+        android:title="@string/match" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/icon_setting"
+        android:title="@string/setting" />
+</menu>

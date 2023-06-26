@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Football</string>
+    <string name="comparison">Comparison</string>
+    <string name="game">Game</string>
+    <string name="guide">Guide</string>
+    <string name="match">Match</string>
+    <string name="setting">Setting</string>
 </resources>
