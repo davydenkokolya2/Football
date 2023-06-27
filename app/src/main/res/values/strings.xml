@@ -5,4 +5,13 @@
     <string name="guide">Guide</string>
     <string name="match">Match</string>
     <string name="setting">Setting</string>
+    <string name="bot">BOT</string>
+    <string name="you">You</string>
+    <string name="time">Time:</string>
+    <string name="_1_minutes">1 minutes</string>
+    <string name="_1_5_minutes">1.5 minutes</string>
+    <string name="_2_minutes">2 minutes</string>
+    <string name="choose_a_team">Choose a team:</string>
+    <string name="play">Play</string>
+    <string name="timeline">Timeline</string>
 </resources>

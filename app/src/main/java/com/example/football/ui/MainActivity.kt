@@ -20,10 +20,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         replaceFragment(MainMenuFragment())
-        //binding.bottomNavigationView.menu.forEach { it.isChecked = false }
-        uncheckableBottomNavigationView()
+
+        //uncheckableBottomNavigationView()
+        //binding.bottomNavigationView.setSelectedItemId(R.id.navbar_navigation);
+
         binding.bottomNavigationView.setOnItemSelectedListener {
-            checkableBottomNavigationView()
+            //checkableBottomNavigationView()
             when (it.itemId) {
                 R.id.navigation_comparison -> replaceFragment(ComparisonFragment())
                 R.id.navigation_game -> replaceFragment(GameFragment())
@@ -37,13 +39,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun uncheckableBottomNavigationView() {
+    /*private fun uncheckableBottomNavigationView() {
         binding.bottomNavigationView.menu.setGroupCheckable(0, false, false)
     }
 
     private fun checkableBottomNavigationView() {
         binding.bottomNavigationView.menu.setGroupCheckable(0, true, true)
-    }
+    }*/
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
