@@ -1,13 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.setting.SettingFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Setting" />
+        android:id="@+id/tvSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="127dp"
+        android:text="@string/sound"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rgSound"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="125dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSound">
+
+        <RadioButton
+            android:id="@+id/rbSoundOn"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/on"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbSoundOff"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/off"
+            android:textColor="@color/white" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvBlur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/blur"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSound" />
+
+    <RadioGroup
+        android:id="@+id/rgBlur"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="125dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBlur">
+
+        <RadioButton
+            android:id="@+id/rbBlurOn"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/on"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbBlurOff"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/off"
+            android:textColor="@color/white" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/difficulty"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgBlur" />
+
+    <RadioGroup
+        android:id="@+id/rgDifficulty"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="72dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDifficulty">
+
+        <RadioButton
+            android:id="@+id/rbDifficultyAmateur"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/amateur"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbDifficultyPRO"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/pro"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rbDifficultyLegendary"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_radio_button_sound"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/legendary"
+            android:textColor="@color/white" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

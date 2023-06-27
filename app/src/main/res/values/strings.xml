@@ -14,4 +14,12 @@
     <string name="choose_a_team">Choose a team:</string>
     <string name="play">Play</string>
     <string name="timeline">Timeline</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="blur">Blur:</string>
+    <string name="sound">Sound:</string>
+    <string name="amateur">Amateur</string>
+    <string name="pro">PRO</string>
+    <string name="legendary">Legendary</string>
+    <string name="difficulty">Difficulty</string>
 </resources>
