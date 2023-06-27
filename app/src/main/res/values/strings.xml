@@ -22,4 +22,11 @@
     <string name="pro">PRO</string>
     <string name="legendary">Legendary</string>
     <string name="difficulty">Difficulty</string>
+    <string name="text_guide_paragraph_1">In the app you can not only view the schedule of upcoming matches, but even hold them!</string>
+    <string name="text_guide_paragraph_2">To do this, you need to select a match, set the settings that are convenient for you and go to the game.</string>
+    <string name="text_guide_paragraph_3">In the game you need to score goals to your opponent by moving your game scheme.  The scheme can move up / down and left / right to the borders of the field and kicking the ball.</string>
+    <string name="text_guide_paragraph_4">You can score or concede a goal if the ball goes beyond the allocated area - your goal.</string>
+    <string name="text_guide_paragraph_5">The first time any of your players touches the ball, the ball slows down a little, on the second touch, if it has not been touched by players of the other team, it speeds up. </string>
+    <string name="text_guide_paragraph_6">All played matches will be recorded in your list, where you can then track the result of the actual match.</string>
+    <string name="text_guide_paragraph_7">Also, you can practice by simply running the game without selecting a match.</string>
 </resources>
