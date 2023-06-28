@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:text="12.07"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_item_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvFirstTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="FC Lutie"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGoalFirstTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginEnd="10dp"
+            android:text="5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFirstTeam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFirstTeam" />
+
+        <TextView
+            android:id="@+id/tvSecondTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginTop="10dp"
+            android:text="FC Megamonster"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tvFirstTeam"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstTeam" />
+
+        <TextView
+            android:id="@+id/tvGoalSecondTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginTop="10dp"
+            android:text="2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/tvGoalFirstTeam"
+            app:layout_constraintStart_toStartOf="@+id/tvGoalFirstTeam"
+            app:layout_constraintTop_toBottomOf="@+id/tvGoalFirstTeam" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

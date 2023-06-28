@@ -1,32 +1,55 @@
 package com.example.football.ui.match
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.football.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.football.databinding.FragmentMatchBinding
 
 class MatchFragment : Fragment() {
+
 
     companion object {
         fun newInstance() = MatchFragment()
     }
 
+    lateinit var binding: FragmentMatchBinding
     private lateinit var viewModel: MatchViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_match, container, false)
+        binding = FragmentMatchBinding.inflate(inflater, container, false)
+
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MatchViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        var layoutManager =
+            LinearLayoutManager(this.requireActivity(), LinearLayoutManager.VERTICAL, false)
+
+        binding.rvMatch.layoutManager = layoutManager
+        binding.rvMatch.adapter =
+            MatchAdapter(
+                arrayListOf(
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    Match("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                )
+            )
     }
 
 }

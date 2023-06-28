@@ -29,4 +29,6 @@
     <string name="text_guide_paragraph_5">The first time any of your players touches the ball, the ball slows down a little, on the second touch, if it has not been touched by players of the other team, it speeds up. </string>
     <string name="text_guide_paragraph_6">All played matches will be recorded in your list, where you can then track the result of the actual match.</string>
     <string name="text_guide_paragraph_7">Also, you can practice by simply running the game without selecting a match.</string>
+    <string name="your_last_matches">Your last matches</string>
+    <string name="play_again">Play again</string>
 </resources>

@@ -6,7 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.football.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.football.databinding.FragmentMainMenuBinding
 
 class MainMenuFragment : Fragment() {
 
@@ -15,16 +16,36 @@ class MainMenuFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainMenuViewModel
+    lateinit var binding: FragmentMainMenuBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentMainMenuBinding.inflate(inflater, container, false)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_main_menu, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainMenuViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
+        var layoutManager =
+            LinearLayoutManager(this.requireActivity(), LinearLayoutManager.VERTICAL, false)
+
+        binding.rvLastMatches.layoutManager = layoutManager
+        binding.rvLastMatches.adapter =
+            LastMatchesAdapter(
+                arrayListOf(
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                    LastMatches("14.05", "FC Lutie", 5, "FC Megamonster", 2),
+                )
+            )
+    }
 }
