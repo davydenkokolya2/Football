@@ -35,10 +35,11 @@
         <RadioButton
             android:id="@+id/rbSoundOn"
             android:layout_width="41dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginRight="20dp"
             android:background="@drawable/custom_radio_button_sound"
             android:button="@null"
+            android:checked="true"
             android:gravity="center"
             android:text="@string/on"
             android:textColor="@color/white" />
@@ -87,6 +88,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/custom_radio_button_sound"
             android:button="@null"
+            android:checked="true"
             android:gravity="center"
             android:text="@string/on"
             android:textColor="@color/white" />
@@ -135,6 +137,7 @@
             android:layout_marginRight="8dp"
             android:background="@drawable/custom_radio_button_sound"
             android:button="@null"
+            android:checked="true"
             android:gravity="center"
             android:text="@string/amateur"
             android:textColor="@color/white" />

@@ -1,4 +1,4 @@
-package com.example.football.ui.comparison
+package com.example.football.domain
 
 
 data class Comparison(

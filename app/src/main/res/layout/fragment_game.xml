@@ -16,6 +16,82 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/icon_basket_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:srcCompat="@drawable/icon_basket_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="21.32dp"
+            android:layout_height="21.32dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/icon_small_foot_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="21.32dp"
+            android:layout_height="21.32dp"
+            android:layout_marginStart="210dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/icon_small_foot_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="33.48dp"
+            android:layout_height="33.48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:srcCompat="@drawable/icon_big_foot_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="33.48dp"
+            android:layout_height="33.48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:srcCompat="@drawable/icon_big_foot_ball_" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="31.81dp"
+            android:layout_height="36.74dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="-2dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_dice_" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="31.81dp"
+            android:layout_height="36.74dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="-2dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_dice_" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView

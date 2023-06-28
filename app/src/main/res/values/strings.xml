@@ -9,7 +9,7 @@
     <string name="you">You</string>
     <string name="time">Time:</string>
     <string name="_1_minutes">1 minutes</string>
-    <string name="_1_5_minutes">1.5 minutes</string>
+    <string name="_1_5_minutes">1:30 minutes</string>
     <string name="_2_minutes">2 minutes</string>
     <string name="choose_a_team">Choose a team:</string>
     <string name="play">Play</string>
@@ -31,4 +31,5 @@
     <string name="text_guide_paragraph_7">Also, you can practice by simply running the game without selecting a match.</string>
     <string name="your_last_matches">Your last matches</string>
     <string name="play_again">Play again</string>
+    <string name="ok">Ok</string>
 </resources>

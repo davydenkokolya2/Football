@@ -12,4 +12,5 @@
     <color name="background_true_radio_button">#3381C4</color>
     <color name="second_background">#132635</color>
     <color name="item_background">#1E3346</color>
+    <color name="bottom_tool_bar">#9AEF5B05</color>
 </resources>

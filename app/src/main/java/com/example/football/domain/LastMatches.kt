@@ -1,7 +1,7 @@
-package com.example.football.ui.match
+package com.example.football.domain
 
 
-data class Match(
+data class LastMatches(
     var date: String,
     var nameFirstTeam: String,
     var goalFirstTeam: Int,

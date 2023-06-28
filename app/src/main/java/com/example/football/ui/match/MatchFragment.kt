@@ -5,9 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.football.databinding.FragmentMatchBinding
+import com.example.football.domain.Match
+import com.example.football.ui.StateViewModel
+import com.example.football.utils.Screens
 
 class MatchFragment : Fragment() {
 
@@ -17,12 +21,14 @@ class MatchFragment : Fragment() {
     }
 
     lateinit var binding: FragmentMatchBinding
+    private val stateViewModel: StateViewModel by activityViewModels()
     private lateinit var viewModel: MatchViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        stateViewModel.loadState(Screens.MATCH)
         binding = FragmentMatchBinding.inflate(inflater, container, false)
 
         return binding.root

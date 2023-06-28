@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.football.R
+import com.example.football.domain.Match
 
 class MatchAdapter(matchList: ArrayList<Match>) :
     RecyclerView.Adapter<MatchAdapter.MatchViewHolder>() {
