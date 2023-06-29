@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnTimeline"
+        android:id="@+id/btnTimelineOk"
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_marginBottom="17dp"

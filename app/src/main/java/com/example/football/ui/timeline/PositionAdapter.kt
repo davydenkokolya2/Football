@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.football.R
 import com.example.football.domain.Position
 
-class PositionAdapter(matchList: ArrayList<Position>) :
+class PositionAdapter(matchList: ArrayList<Position>, val onItemClick: (View, Position) -> Unit) :
     RecyclerView.Adapter<PositionAdapter.PositionViewHolder>() {
+
 
     var positionList: List<Position> = matchList
         set(value) {
@@ -31,6 +32,7 @@ class PositionAdapter(matchList: ArrayList<Position>) :
         holder.type.text = currentItem.type
         holder.type.setOnClickListener {
             lastSelectedPosition = holder.adapterPosition
+            onItemClick(it, currentItem)
             notifyDataSetChanged()
         }
         holder.type.isChecked = lastSelectedPosition == position
