@@ -2,6 +2,7 @@ package com.example.football.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.football.domain.Position
 import com.example.football.utils.PlayerPositions
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RedTeamPositionViewModel @Inject constructor(): ViewModel() {
-    private val _statePosition = MutableStateFlow<PlayerPositions?>(null)
+    private val _statePosition = MutableStateFlow<PlayerPositions?>(PlayerPositions.DEFENDING)
     val statePosition: StateFlow<PlayerPositions?> = _statePosition
 
     fun loadState(playerPositions: PlayerPositions) {

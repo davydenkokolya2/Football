@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class TimeViewModel @Inject constructor() : ViewModel() {
-    private val _stateTime = MutableStateFlow<Long?>(null)
+    private val _stateTime = MutableStateFlow<Long?>(60)
     val stateTime: StateFlow<Long?> = _stateTime
 
     fun loadState(time: Long) {

@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BlueTeamPositionViewModel @Inject constructor() : ViewModel() {
-    private val _statePosition = MutableStateFlow<PlayerPositions?>(null)
+    private val _statePosition = MutableStateFlow<PlayerPositions?>(PlayerPositions.DEFENDING)
     val statePosition: StateFlow<PlayerPositions?> = _statePosition
 
     fun loadState(playerPositions: PlayerPositions) {

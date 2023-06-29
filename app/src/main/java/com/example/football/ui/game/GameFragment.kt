@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.football.R
 import com.example.football.databinding.FragmentGameBinding
 import com.example.football.ui.StateViewModel
 import com.example.football.ui.TimeViewModel
 import com.example.football.utils.Screens
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class GameFragment : Fragment() {
@@ -41,7 +43,10 @@ class GameFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
         binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            Log.d("test", group.indexOfChild(group.findViewById(group.checkedRadioButtonId)).toString())
+            Log.d(
+                "test",
+                group.indexOfChild(group.findViewById(group.checkedRadioButtonId)).toString()
+            )
             when (group.indexOfChild(group.findViewById(group.checkedRadioButtonId))) {
                 0 -> timeViewModel.loadState(60)
                 1 -> timeViewModel.loadState(90)
@@ -53,6 +58,16 @@ class GameFragment : Fragment() {
         }
         binding.btnPlay.setOnClickListener {
             stateViewModel.loadState(Screens.PLAY)
+        }
+        lifecycleScope.launch {
+            timeViewModel.stateTime.collect {
+                if (it != null)
+                    when (it) {
+                        60L -> binding.radioButton2.isChecked = true
+                        90L -> binding.radioButton7.isChecked = true
+                        120L -> binding.radioButton8.isChecked = true
+                    }
+            }
         }
     }
 
